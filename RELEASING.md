@@ -4,5 +4,7 @@ This project uses GitHub Actions to publish to npm. The publish workflow runs wh
 
 ## Steps to cut a release
 
-1. **Decide the new version**. Use `pnpm version` to bump the version and create a git tag for it. Commit and push the change and the tag.
-2. **Create a GitHub release**. Go to the tags page and create a release using the pushed tag.
+1. **Apply the changesets**. Run `pnpm changeset version` and review the changes.
+2. **Commit and tag**. `git commit -m X.Y.Z && git tag vX.Y.Z`
+3. **Push and push tags**. `git push && git push --tags`
+4. **Create a GitHub release**. Go to the [tags](https://github.com/slippy-lint/slippy/tags) page and create a release using the new tag.
